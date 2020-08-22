@@ -2490,7 +2490,7 @@ class TestSpecialMethods:
                 if out_no:
                     info['outputs'] = out_no
 
-                results = super(A, self).__array_ufunc__(ufunc, method,
+                results = super().__array_ufunc__(ufunc, method,
                                                          *args, **kwargs)
                 if results is NotImplemented:
                     return NotImplemented

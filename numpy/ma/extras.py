@@ -1491,7 +1491,7 @@ class MAxisConcatenator(AxisConcatenator):
         if isinstance(key, str):
             raise MAError("Unavailable for masked array.")
 
-        return super(MAxisConcatenator, self).__getitem__(key)
+        return super().__getitem__(key)
 
 
 class mr_class(MAxisConcatenator):
