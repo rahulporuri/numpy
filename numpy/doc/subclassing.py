@@ -484,8 +484,8 @@ following.
             if out_no:
                 info['outputs'] = out_no
 
-            results = super(A, self).__array_ufunc__(ufunc, method,
-                                                     *args, **kwargs)
+            results = super().__array_ufunc__(ufunc, method,
+                                              *args, **kwargs)
             if results is NotImplemented:
                 return NotImplemented
 
@@ -598,7 +598,7 @@ some print statements:
           print('   self is %s' % repr(self))
           print('   arr is %s' % repr(out_arr))
           # then just call the parent
-          return super(MySubClass, self).__array_wrap__(self, out_arr, context)
+          return super().__array_wrap__(self, out_arr, context)
 
 We run a ufunc on an instance of our new array:
 
